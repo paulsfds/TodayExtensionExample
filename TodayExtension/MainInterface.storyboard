@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Jey-6p-jRU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cgl-F5-XBc">
+            <objects>
+                <viewController id="Jey-6p-jRU" customClass="TodayViewController" customModule="TodayExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XWJ-1E-bZg"/>
+                        <viewControllerLayoutGuide type="bottom" id="xMb-MW-0Gf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="GJk-q6-9Ha">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lg5-0A-V6v">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-4r-FLZ">
+                                        <rect key="frame" x="0.0" y="39" width="158" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="0ny-3S-zfT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Condition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enh-4d-35Z">
+                                        <rect key="frame" x="0.0" y="78" width="143" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnN-X6-4Mi">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Gq7-w1-FaK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="enh-4d-35Z" secondAttribute="bottom" id="Jj5-Nf-Y0f"/>
+                                    <constraint firstItem="enh-4d-35Z" firstAttribute="top" secondItem="MaA-4r-FLZ" secondAttribute="bottom" constant="18" id="LZp-KD-mZl"/>
+                                    <constraint firstItem="fnN-X6-4Mi" firstAttribute="leading" secondItem="MaA-4r-FLZ" secondAttribute="leading" id="YKm-K8-gxr"/>
+                                    <constraint firstItem="fnN-X6-4Mi" firstAttribute="top" secondItem="lg5-0A-V6v" secondAttribute="top" id="bDb-sS-90W"/>
+                                    <constraint firstItem="enh-4d-35Z" firstAttribute="leading" secondItem="MaA-4r-FLZ" secondAttribute="leading" id="bXh-db-2xS"/>
+                                    <constraint firstItem="MaA-4r-FLZ" firstAttribute="top" secondItem="fnN-X6-4Mi" secondAttribute="bottom" constant="18" id="d5o-Sl-N3L"/>
+                                    <constraint firstItem="fnN-X6-4Mi" firstAttribute="leading" secondItem="lg5-0A-V6v" secondAttribute="leading" id="s7o-fQ-lNN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lg5-0A-V6v" firstAttribute="top" secondItem="XWJ-1E-bZg" secondAttribute="bottom" id="Qof-yw-cW5"/>
+                            <constraint firstItem="lg5-0A-V6v" firstAttribute="bottom" secondItem="xMb-MW-0Gf" secondAttribute="top" id="aDg-1J-JJV"/>
+                            <constraint firstItem="lg5-0A-V6v" firstAttribute="leading" secondItem="GJk-q6-9Ha" secondAttribute="leading" id="nJN-Yb-GYL"/>
+                            <constraint firstAttribute="trailing" secondItem="lg5-0A-V6v" secondAttribute="trailing" id="q44-3X-Fh4"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="100"/>
+                    <connections>
+                        <outlet property="currentTemperatureLabel" destination="MaA-4r-FLZ" id="LYM-KA-G4L"/>
+                        <outlet property="locationLabel" destination="fnN-X6-4Mi" id="zxS-YE-UYy"/>
+                        <outlet property="weatherConditionLabel" destination="enh-4d-35Z" id="QuA-gr-btp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJw-YE-c8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="285"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

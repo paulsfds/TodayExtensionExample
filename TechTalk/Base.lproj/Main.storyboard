@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BDn-6j-7pq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Bwh-mt-crC">
+            <objects>
+                <viewController id="BDn-6j-7pq" customClass="ViewController" customModule="TechTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tnz-LT-Tty"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oxd-Cj-vcc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U3e-eO-7ht">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCQ-GU-DpF">
+                                <rect key="frame" x="170" y="20" width="75" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9fj-ej-DYU">
+                                <rect key="frame" x="60" y="64" width="295" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="VGv-Pm-0Jg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Condition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-6y-Cm8">
+                                <rect key="frame" x="114" y="137" width="161" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMARY:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLY-2b-lGl">
+                                <rect key="frame" x="16" y="143" width="90" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="IYD-aU-HDT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOy-i4-3cR">
+                                <rect key="frame" x="0.0" y="195" width="414" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BDn-6j-7pq" id="Ba2-Qz-pvM"/>
+                                    <outlet property="delegate" destination="BDn-6j-7pq" id="0mC-Wa-6Re"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2901960784" green="0.66666666669999997" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MCQ-GU-DpF" firstAttribute="centerX" secondItem="uOy-i4-3cR" secondAttribute="centerX" id="6GR-wi-h9A"/>
+                            <constraint firstItem="uOy-i4-3cR" firstAttribute="top" secondItem="NhW-6y-Cm8" secondAttribute="bottom" constant="34" id="JPh-Z8-b2a"/>
+                            <constraint firstAttribute="trailing" secondItem="uOy-i4-3cR" secondAttribute="trailing" id="LVu-E7-qgC"/>
+                            <constraint firstItem="uOy-i4-3cR" firstAttribute="leading" secondItem="U3e-eO-7ht" secondAttribute="leading" id="ObG-Ck-zmg"/>
+                            <constraint firstAttribute="centerX" secondItem="9fj-ej-DYU" secondAttribute="centerX" id="QhH-CU-UDS"/>
+                            <constraint firstItem="NhW-6y-Cm8" firstAttribute="leading" secondItem="WLY-2b-lGl" secondAttribute="trailing" constant="8" symbolic="YES" id="X2f-0w-q2H"/>
+                            <constraint firstItem="NhW-6y-Cm8" firstAttribute="top" secondItem="9fj-ej-DYU" secondAttribute="bottom" constant="31" id="Zq6-AF-gzX"/>
+                            <constraint firstItem="MCQ-GU-DpF" firstAttribute="top" secondItem="Tnz-LT-Tty" secondAttribute="bottom" id="bnb-i7-Lel"/>
+                            <constraint firstItem="9fj-ej-DYU" firstAttribute="top" secondItem="MCQ-GU-DpF" secondAttribute="bottom" constant="20" id="mga-Vp-7hE"/>
+                            <constraint firstItem="WLY-2b-lGl" firstAttribute="leading" secondItem="U3e-eO-7ht" secondAttribute="leading" constant="16" id="s5y-j3-emU"/>
+                            <constraint firstItem="WLY-2b-lGl" firstAttribute="baseline" secondItem="NhW-6y-Cm8" secondAttribute="baseline" id="zy6-76-MqI"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="currentTemperatureLabel" destination="9fj-ej-DYU" id="Rp9-bK-tkz"/>
+                        <outlet property="locationLabel" destination="MCQ-GU-DpF" id="BYn-LV-7L9"/>
+                        <outlet property="pickerView" destination="uOy-i4-3cR" id="AQ1-aD-Zh9"/>
+                        <outlet property="weatherConditionLabel" destination="NhW-6y-Cm8" id="of2-H6-6HZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FH1-vY-L5W" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
